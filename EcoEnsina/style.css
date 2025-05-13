@@ -81,22 +81,18 @@ form p a:hover {
     text-decoration: underline;
 }
 
-.styled-select {
-    width: 100%;
+#estado {
+    width: 50%;
     max-width: 400px;
-    padding: 0.5rem;
-    border: 2px solid #4CAF50;
-    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     background-color: white;
-    font-size: 1rem;
+    font-size: 16px;
     color: #2e4e2e;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-repeat: no-repeat;
-    background-position: right 10px top 50%;
+    margin-bottom: 16px;
 }
 
-.styled-select option {
+#estado option {
     padding: 10px;
 }
