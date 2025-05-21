@@ -17,11 +17,12 @@ p{
 
 .cadastro{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     min-height: 100vh;
     background-color: #e9f5e9;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 form {
@@ -99,4 +100,8 @@ form p a:hover {
 
 #index{
     background-color: #E9F5E9;
+}
+
+.cadastro form {
+    border-radius: 0;
 }
