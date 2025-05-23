@@ -4,40 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoEnsina</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body id="index">
     <head>
-        <figure>
-            <img src="figs/logo_ecoensina.png" alt="imagem da logo" width="200" height="200">
+        <figure class="logo">
+            <img src="figs/logo_ecoensina.png" alt="imagem da logo" width="341" height="169">
         </figure>
-        <a href="login.html">Entrar</a>
+        <h1 id="titulo">EcoEnsina - Reciclar é cuidar do nosso futuro</h1>
         <nav>
-            <ul>
-                <li><a href="#Nav1">Nav1</a></li>
-                <li><a href="#Nav2">Nav2</a></li>
-                <li><a href="#Nav3">Nav3</a></li>
-                <li><a href="#Nav4">Nav4</a></li>
-            </ul>
+                <a href="#Nav1">Entenda</a>
+                <a href="#Nav2">Separe</a>
+                <a href="#Nav3">Descarte</a>
+                <a href="#Nav4">Contato</a>
+                <a href="login.html" class="botao">Entrar</a>
         </nav>
     </head>
     <main>
-        <h1>EconEnsina</h1>
-        <h2 id="Nav1">Nav1</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum porro aperiam, saepe debitis nemo assumenda minima eum architecto neque officiis rem iste enim dolorem optio ab alias ipsum quibusdam? Ipsum.</p>
-        <h2 id="Nav2">Nav2</h2>
+        <h2 id="Nav1">O que é reciclagem?</h2>
+        <p class="oqereciclagem"> A reciclagem é o processo........................</p>
+        <figure class=""></figure>
+        <h2 id="Nav1">Por que reciclar?</h2>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Id vel eum voluptatibus ab sed placeat minus facilis ea aut optio iure omnis, error quidem voluptatem, aspernatur beatae cumque facere eveniet?</p>
-        <h2 id="Nav3">Nav3</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas odio expedita assumenda fugiat! Tenetur quae ducimus quod magni perferendis aut repellendus iure voluptatem magnam aliquam ratione aliquid, fugit perspiciatis atque.</p>
-        <h2 id="Nav4">Nav4</h2>
+        <h2 id="Nav2">Como separar seu lixo?</h2>
+        <section class="categorias">
+            <section class="tipos">
+                <i class="material-icons">recycling</i>
+                <p>Reciclável</p>
+                <ul id="reciclavel">
+                    <li>Papel</li>
+                    <li>Plástico</li>
+                    <li>Vidro</li>
+                    <li>Metais limpos e secos</li>
+                </ul>
+            </section>
+            <section class ="tipos">
+                <i class="material-icons">compost</i>
+                <p>Orgânico</p>
+                <ul id="reciclavel">
+                    <li>Restos de alimentos</li>
+                    <li>Cascas de frutas</li>
+                    <li>Folhas</li>
+                    <li>Restos de animais</li>
+                </ul>
+            </section>
+            <section class ="tipos">
+                <img src="https://cdn-icons-png.flaticon.com/512/7952/7952156.png" alt="Não reciclável" width="50" height="50">
+                <p>Não Reciclável</p>
+                <ul id="reciclavel">
+                    <li>Papel higiênico</li>
+                    <li>Fraldas</li>
+                    <li>Espelhos</li>
+                    <li>Cerâmica</li>
+                </ul>
+            </section>
+        </section>
+
+        <h2 id="Nav3">Mapa interativo</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto harum in ipsam ut magnam molestias quia dignissimos, sapiente quasi minima odio quis laudantium? Odio molestias expedita, ipsa velit neque sint!</p>
+        <h2 id="Nav4">Contato</h2>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea name="opiniao" id="opiniao" rows="8" cols="50"></textarea>
     </main>
     <footer>
-        <ul>
-            <li><a href="">Link Pedro</a></li>
-            <li><a href="">Link Bruno</a></li>
-            <li><a href="">Link Matheus</a></li>
-        </ul>
+            <a href="">Link Pedro</a>
+            <a href="">Link Bruno</a>
+            <a href="">Link Matheus</a>
     </footer>
 </body>
 </html>
