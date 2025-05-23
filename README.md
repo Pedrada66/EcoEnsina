@@ -1,1 +1,44 @@
-# EcoEnsina
+<h1 align="center">
+   EcoEnsina
+    <br />
+    <br />
+    <a href="">
+      <img src="EcoEnsina/figs/logo_ecoensina.png" alt="Logo EcoEnsina">
+    </a>
+</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status%20-%20Em%20Desenvolvimento%20%20-%20green" alt="Status">  
+  <img src="https://img.shields.io/badge/Liguagem%20-%20HTML%20-%20red" alt="Linguagens">
+  <img src="https://img.shields.io/badge/Liguagem%20-%20CSS%20-%20blue" alt="Linguagens">
+</p>
+
+## Descrição
+Site informativo sobre descarte de lixo.
+
+## Funcionalidades do Projeto 
+- `Login`: Usuários poderá se logar.
+- `Cadastro`: Usuário poderá se cadastrar.
+- `Mapa`: Usuário terá um mapa interativo que é possível visualizar os locais para fazer o descarte de lixo.
+- `Contato`: Usuário poderá entrar em contato para alguma dúvida, sugestão ou suporte.
+
+## Acesso ao Projeto
+É possível acessar o código fonte do projeto no ![Repositório](https://github.com/Pedrada66/EcoEnsina/tree/main).
+
+O link do site é: [https://encr.pw/EcoEnsina](https://encr.pw/EcoEnsina).
+<p align="center">
+    <a href="https://encr.pw/EcoEnsina">
+      <img src="EcoEnsina/figs/QrCode.png" alt="QR Code">
+    </a>
+</p>
+
+## Abrir e rodar o projeto
+É necessário apenas um navegador (Chrome, Mozilla, etc) para abrir o código.
+
+## Tecnologias Utilizadas
+- `HTML`
+- `CSS`
+
+## Desenvolvedores
+| [<img loading="lazy" src="https://github.com/Gnordh1/curriculumvitaeBGB/blob/main/figs/foto.jpg" width=115><br><sub>Bruno Garcia Baricelo</sub>](https://github.com/Gnordh1) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/100427903?v=4" width=115><br><sub>Matheus Duarte</sub>](https://github.com/MatheuwsDuarte) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/64929940?v=4" width=115><br><sub>Pedro Coppo Silva</sub>](https://github.com/Pedrada66) |
+| :---: | :---: | :---: |  
