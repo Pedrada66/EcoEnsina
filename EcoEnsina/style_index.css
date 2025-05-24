@@ -25,6 +25,10 @@ h2{
 }
 
 nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +36,7 @@ nav{
     padding: 20px;
     border-top: 5px solid #4CAF50; 
     border-bottom: 5px solid #4CAF50;
+    background-color: #E9F5E9; /* ou branco */
 }
 
 nav a{
