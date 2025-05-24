@@ -25,6 +25,10 @@ h2{
     scroll-margin-top: 120px;
 }
 
+#Nav1{
+    margin-top: 60px;
+}
+
 nav{
     position: sticky;
     top: 0;
@@ -169,3 +173,60 @@ nav a{
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
+
+.latasLixo img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 8px; 
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+.contato label[for="mensagem"] {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 225px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
+.contato label[for="email"] {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 260px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
+.contato input,
+.contato textarea {
+    width: 300px; /* Ajuste o tamanho conforme quiser */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.contato button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+.contato button:hover {
+    background-color: #45a049;
+}
+
+
