@@ -22,6 +22,7 @@ h2{
     text-align: center;
     font-family:'Roboto', sans-serif;
     font-size: 30px;
+    scroll-margin-top: 120px;
 }
 
 nav{
