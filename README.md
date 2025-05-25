@@ -3,7 +3,7 @@
     <br />
     <br />
     <a href="">
-      <img src="EcoEnsina/figs/logo_ecoensina.png" alt="Logo EcoEnsina">
+      <img src="figs/logo_ecoensina.png" alt="Logo EcoEnsina">
     </a>
 </h1>
 
@@ -23,12 +23,12 @@ Site informativo sobre descarte de lixo.
 - `Contato`: Usuário poderá entrar em contato para alguma dúvida, sugestão ou suporte.
 
 ## Acesso ao Projeto
-É possível acessar o código fonte do projeto no ![Repositório](https://github.com/Pedrada66/EcoEnsina/tree/main).
+<p>É possível acessar o código fonte do projeto no <a href="https://github.com/Pedrada66/EcoEnsina/tree/main">Repositório</a></p>
 
-O link do site é: [https://encr.pw/EcoEnsina](https://encr.pw/EcoEnsina).
+O link do site é: [https://pedrada66.github.io/EcoEnsina/](https://pedrada66.github.io/EcoEnsina/).
 <p align="center">
     <a href="https://encr.pw/EcoEnsina">
-      <img src="EcoEnsina/figs/QrCode.png" alt="QR Code">
+      <img src="figs/QrCode.png" alt="QR Code">
     </a>
 </p>
 
