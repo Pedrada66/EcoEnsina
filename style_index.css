@@ -177,6 +177,18 @@ nav a:hover{
     color:#45A049;
 }
 
+.link-externo{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em; 
+    line-height: 1.6; 
+    color:#4CAF50;
+}
+
+.link-externo:hover{
+    color:#45A049;
+}
+
 .primeiraimagem {
     flex: 1; 
     display: flex;
