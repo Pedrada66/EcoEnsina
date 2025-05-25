@@ -18,12 +18,12 @@ footer a{
 }
 
 h2{
-    font-family: 'Nunito', sans-serif;
-    font-weight: 700; /* Use um peso mais alto para o título */
-    font-size: 2.5em; /* Ajuste o tamanho conforme necessário */
-    color: #333; /* Ajuste a cor */
-    text-align: center; /* Se quiser centralizar */
-    margin-bottom: 20px; /* Espaçamento */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; 
+    font-size: 2.5em; 
+    color: #333; 
+    text-align: center; 
+    margin-bottom: 20px; 
     scroll-margin-top: 120px;
 }
 
@@ -198,32 +198,29 @@ nav a:hover{
     color: #2E4E2E; 
 }
 
-/* Estilo para o Contêiner Principal (Mapa + Legenda) */
 .map-area {
-    display: flex; /* Ativa o Flexbox - Isso coloca os filhos lado a lado */
-    justify-content: center; /* Centraliza os itens horizontalmente (opcional) */
-    align-items: center; /* Alinha os itens pelo topo */
-    gap: 30px; /* Cria um espaço (ex: 30px) entre o mapa e a legenda */
-    padding: 20px; /* Adiciona um espaçamento interno na área */
-    flex-wrap: wrap; /* Permite que os itens quebrem para baixo em telas pequenas */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30px; 
+    padding: 20px; 
+    flex-wrap: wrap; 
 }
 
-/* Estilo para o Contêiner do Mapa */
+
 .map-container {
-    /* Defina um tamanho para o seu mapa ou deixe-o flexível */
-    /* Exemplo: */
-    width: 600px; /* Ou use max-width, ou porcentagem */
-    /* Mantenha o estilo do seu mapa (iframe ou div) aqui */
-    border: 1px solid #ccc; /* Apenas para visualização */
+    width: 600px;
+   
+    border: 1px solid #ccc; 
     box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
-    border-radius: 8px; /* Adiciona bordas arredondadas como na imagem */
-    overflow: hidden; /* Garante que o iframe fique dentro das bordas */
+    border-radius: 8px; 
+    overflow: hidden; 
 }
 
 .map-container iframe {
-    display: block; /* Remove espaço extra abaixo do iframe */
-    width: 100%; /* Faz o iframe ocupar todo o container */
-    border: none; /* Remove a borda padrão do iframe */
+    display: block; 
+    width: 100%;
+    border: none; 
 }
 
 .map-legend ul {
@@ -238,7 +235,7 @@ nav a:hover{
     background-color: #E9E9E9;
     border-radius: 50px;
     padding: 8px 15px 8px 8px;
-    margin-bottom: 15px; /* Pode remover se 'gap' for suficiente */
+    margin-bottom: 15px; 
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -254,7 +251,7 @@ nav a:hover{
 }
 
 .icon-white {
-    color: white ; /* Usar !important se outra regra estiver sobrescrevendo */
+    color: white ; 
 }
 
 .color-blue { background-color: #1976D2; }
@@ -276,18 +273,18 @@ nav a:hover{
     flex-grow: 1;
 }
 
-/* (Opcional) Media Query para Telas Pequenas */
-@media (max-width: 950px) { /* Ajuste este valor conforme necessário */
+
+@media (max-width: 950px) { 
     .map-area {
-        flex-direction: column; /* Coloca um abaixo do outro */
-        align-items: center; /* Centraliza na vertical */
+        flex-direction: column; 
+        align-items: center; 
     }
     .map-container {
-        width: 90%; /* Ocupa quase toda a largura */
-        max-width: 600px; /* Limita a largura máxima */
+        width: 90%; 
+        max-width: 600px; 
     }
     .map-legend {
-       margin-top: 20px; /* Adiciona espaço acima da legenda quando empilhado */
+       margin-top: 20px; 
     }
 }
 
@@ -298,51 +295,6 @@ nav a:hover{
     justify-content: center;
 }
 
-.contato label[for="mensagem"] {
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 210px;
-    margin-bottom: -10px;
-    margin-top: -10px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.contato label[for="email"] {
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 260px;
-    margin-bottom: -10px;
-    margin-top: -10px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.contato input,
-.contato textarea {
-    width: 300px; /* Ajuste o tamanho conforme quiser */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.contato button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: -10px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.contato button:hover {
-    background-color: #45a049;
-}
 
 .links a{
     color: #f9fdf9;
@@ -356,3 +308,45 @@ nav a:hover{
 .links a:hover{
     text-decoration: underline;
 }
+
+form {
+    background-color: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+form label {
+    display: block;
+    color: #333;
+    font-size: large;
+    font-family: 'Roboto';
+    margin-bottom: -10px;
+}
+
+form input, form textarea {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: large;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
