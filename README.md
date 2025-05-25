@@ -14,7 +14,13 @@
 </p>
 
 ## Descrição
-Site informativo sobre descarte de lixo.
+O EcoEnsina é um site educativo com o objetivo de conscientizar a população sobre a importância da reciclagem e da separação correta dos resíduos. Através de informações acessíveis e ferramentas práticas, buscamos promover ações sustentáveis e contribuir para a preservação do meio ambiente.
+
+## Objetivos do projeto:
+- Ensinar o que é reciclagem e por que ela é essencial para o futuro do planeta;
+- Informar sobre os diferentes tipos de resíduos: recicláveis, orgânicos e não recicláveis;
+- Oferecer um mapa interativo com os principais pontos de coleta seletiva em Cornélio Procópio;
+- Estimular a conscientização ambiental nas comunidades locais.
 
 ## Funcionalidades do Projeto 
 - `Login`: Usuários poderá se logar.
