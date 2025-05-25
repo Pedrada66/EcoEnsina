@@ -36,8 +36,32 @@
             <img src="figs/primeiraImagem.jpg" alt="homem coletando lixo" width="736" height="491">
         </figure>
         </div>
-        <h2>Por que reciclar?</h2>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Id vel eum voluptatibus ab sed placeat minus facilis ea aut optio iure omnis, error quidem voluptatem, aspernatur beatae cumque facere eveniet?</p>
+
+        <h2 id="Nav1">Por que reciclar?</h2>
+        <div class="categorias">
+            <div class="tipos">
+                <i class="material-icons">looks_one</i>
+                <p>Proteger o planeta</p>
+                <ul id="reciclavel">
+                    <li>Reciclar reduz a poluição, conserva florestas, rios e oceanos, e diminui a extração de recursos naturais.</li>
+                </ul>
+            </div>
+            <div class ="tipos">
+                <i class="material-icons">looks_two</i>
+                <p>Economizar Recursos</p>
+                <ul id="organico">
+                    <li>Produzir com materiais reciclados usa menos energia e água, poupando recursos essenciais para o futuro.</li>  
+                </ul>
+            </div>
+            <div class ="tipos">
+                <i class="material-icons">looks_3</i>
+                <p>Gerar Empregos</p>
+                <ul id="naoreciclavel">
+                    <li>A indústria da reciclagem cria empregos e renda para milhares de pessoas, movimentando a economia local.</li>
+                </ul>
+            </div>
+        </div>
+
         <h2 id="Nav2">Como separar seu lixo?</h2>
         <div class="categorias">
             <div class="tipos">
@@ -76,7 +100,43 @@
         </figure>
 
         <h2 id="Nav3">Mapa interativo</h2>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1vYYNys8IgxyJzuqoIAvrTIXAI2GU6bw&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+        <p class="map-text"> Use nosso mapa interativo para encontrar os pontos de coleta mais próximos da sua casa em Cornélio Procópio.
+        </p>
+        <section class="map-area">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1vYYNys8IgxyJzuqoIAvrTIXAI2GU6bw&ehbc=2E312F&noprof=1" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        
+            <div class="map-legend">
+                <ul>
+                    <li class="legend-item">
+                        <span class="icon-circle color-blue">
+                            <span class="material-icons icon-white">location_on</span>
+                        </span>
+                        <span class="label-text"> Sucata</span>
+                    </li>
+                    <li class="legend-item">
+                        <span class="icon-circle color-green">
+                            <span class="material-icons icon-white">location_on</span>
+                        </span>
+                        <span class="label-text"> Reciclagem</span>
+                    </li>
+                    <li class="legend-item">
+                        <span class="icon-circle color-grey">
+                            <span class="material-icons icon-white">location_on</span>
+                        </span>
+                        <span class="label-text"> Ferro Velho</span>
+                    </li>
+                    <li class="legend-item">
+                        <span class="icon-circle color-orange">
+                            <span class="material-icons icon-white">location_on</span>
+                        </span>
+                        <span class="label-text"> Lixo eletrônico</span>
+                    </li>
+                </ul>
+        </div>
+    </section>
+
         <h2 id="Nav4">Contato</h2>
 
         <div class="contato">
@@ -88,10 +148,10 @@
         </div>
 
     </main>
-    <footer>
-            <a href="">Link Pedro</a>
-            <a href="">Link Bruno</a>
-            <a href="">Link Matheus</a>
+    <footer class="links">
+            <a href="https://pedrada66.github.io/Curriculum-Vitae/" target="_blank">CV - Pedro</a>
+            <a href="https://gnordh1.github.io/curriculumvitaeBGB/" target="_blank">CV - Bruno</a>
+            <a href="https://matheuwsduarte.github.io/Curriculo/" target="_blank">CV - Matheus</a>
     </footer>
 </body>
 </html>

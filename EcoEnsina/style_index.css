@@ -1,4 +1,3 @@
-
 #index{
     background-color: #E9F5E9;
     margin: 0;
@@ -19,9 +18,12 @@ footer a{
 }
 
 h2{
-    text-align: center;
-    font-family:'Roboto', sans-serif;
-    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700; /* Use um peso mais alto para o título */
+    font-size: 2.5em; /* Ajuste o tamanho conforme necessário */
+    color: #333; /* Ajuste a cor */
+    text-align: center; /* Se quiser centralizar */
+    margin-bottom: 20px; /* Espaçamento */
     scroll-margin-top: 120px;
 }
 
@@ -50,6 +52,10 @@ nav a{
     font-weight: bold;
     font-size: 22px;    
     font-family: 'Roboto', sans-serif;
+}
+
+nav a:hover{
+    text-decoration: underline;
 }
 
 .botao{
@@ -181,6 +187,110 @@ nav a{
     border-radius: 8px; 
 }
 
+.map-text{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    flex: 1; 
+    padding: 20px;
+    font-size: 1.3em; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+    color: #2E4E2E; 
+}
+
+/* Estilo para o Contêiner Principal (Mapa + Legenda) */
+.map-area {
+    display: flex; /* Ativa o Flexbox - Isso coloca os filhos lado a lado */
+    justify-content: center; /* Centraliza os itens horizontalmente (opcional) */
+    align-items: center; /* Alinha os itens pelo topo */
+    gap: 30px; /* Cria um espaço (ex: 30px) entre o mapa e a legenda */
+    padding: 20px; /* Adiciona um espaçamento interno na área */
+    flex-wrap: wrap; /* Permite que os itens quebrem para baixo em telas pequenas */
+}
+
+/* Estilo para o Contêiner do Mapa */
+.map-container {
+    /* Defina um tamanho para o seu mapa ou deixe-o flexível */
+    /* Exemplo: */
+    width: 600px; /* Ou use max-width, ou porcentagem */
+    /* Mantenha o estilo do seu mapa (iframe ou div) aqui */
+    border: 1px solid #ccc; /* Apenas para visualização */
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Adiciona bordas arredondadas como na imagem */
+    overflow: hidden; /* Garante que o iframe fique dentro das bordas */
+}
+
+.map-container iframe {
+    display: block; /* Remove espaço extra abaixo do iframe */
+    width: 100%; /* Faz o iframe ocupar todo o container */
+    border: none; /* Remove a borda padrão do iframe */
+}
+
+.map-legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    background-color: #E9E9E9;
+    border-radius: 50px;
+    padding: 8px 15px 8px 8px;
+    margin-bottom: 15px; /* Pode remover se 'gap' for suficiente */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.icon-white {
+    color: white ; /* Usar !important se outra regra estiver sobrescrevendo */
+}
+
+.color-blue { background-color: #1976D2; }
+.color-green { background-color: #69B46C; }
+.color-grey { background-color: #9E9E9E; }
+.color-orange { background-color: #E53935; }
+
+.icon-circle .material-symbols-outlined {
+    color:#333333;
+    font-size: 28px;
+    font-variation-settings: 'FILL' 0;
+}
+
+.label-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #333333;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+/* (Opcional) Media Query para Telas Pequenas */
+@media (max-width: 950px) { /* Ajuste este valor conforme necessário */
+    .map-area {
+        flex-direction: column; /* Coloca um abaixo do outro */
+        align-items: center; /* Centraliza na vertical */
+    }
+    .map-container {
+        width: 90%; /* Ocupa quase toda a largura */
+        max-width: 600px; /* Limita a largura máxima */
+    }
+    .map-legend {
+       margin-top: 20px; /* Adiciona espaço acima da legenda quando empilhado */
+    }
+}
+
 .contato {
     display: flex;
     flex-direction: column;
@@ -191,9 +301,10 @@ nav a{
 .contato label[for="mensagem"] {
     font-size: 20px;
     font-weight: bold;
-    margin-right: 225px;
+    margin-right: 210px;
     margin-bottom: -10px;
     margin-top: -10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .contato label[for="email"] {
@@ -202,6 +313,7 @@ nav a{
     margin-right: 260px;
     margin-bottom: -10px;
     margin-top: -10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .contato input,
@@ -212,6 +324,7 @@ nav a{
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .contato button {
@@ -219,14 +332,27 @@ nav a{
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
     margin-top: -10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .contato button:hover {
     background-color: #45a049;
 }
 
+.links a{
+    color: #f9fdf9;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
 
+.links a:hover{
+    text-decoration: underline;
+}
