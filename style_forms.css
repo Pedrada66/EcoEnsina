@@ -2,7 +2,7 @@ p{
     margin-top: 100px;
 }
 
-.login {
+.login, .admin {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@ form p {
 }
 
 form p a {
-    color: #4CAF50;
+    color: #4a9ed2;
     text-decoration: none;
 }
 
