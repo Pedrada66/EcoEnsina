@@ -1,6 +1,7 @@
 //Verificar se existem itens no localStorage
 if(localStorage.getItem('cadastros')!=null & localStorage.getItem('cadastros')!='[]'){
     const lista = document.createElement('ul');
+    lista.id = 'lista';
     const formulario = document.getElementById('formulario');
     formulario.appendChild(lista);
     let local = localStorage.getItem('cadastros');
@@ -13,7 +14,20 @@ if(localStorage.getItem('cadastros')!=null & localStorage.getItem('cadastros')!=
 }
 
 function AtualizarLista(){
-
+    const lista = document.getElementById('lista');
+    let local = localStorage.getItem('cadastros');
+    local = JSON.parse(local);
+    console.log(local);
+    if(local != null & local != "[]"){
+        local.forEach(element => {
+            let itens = document.createElement('li');
+            itens.innerHTML = `data: ${element.data}, nome: ${element.nome}, email: ${element.email}`;
+            lista.appendChild(itens);
+        });
+    }
+    else{
+        lista.innerHTML = "";
+    }
 }
 //verificar se existe intens em localStorage.getItem('cadastros')
 //caso haja, criar ul e com calores de li
@@ -44,7 +58,7 @@ btnCadastrar.addEventListener('click', ()=>{
     const mes = data.getMonth() + 1; //não sei pq mas tava dando maio como o mês
     const ano = data.getFullYear();
     let datas = `${dia}/${mes}/${ano}`;
-    
+
     //Verifica se usuário entrou com algo nos campos de entrada
     if(nome!="" & email!=""){
         let cadastroLocal = localStorage.getItem('cadastros');
@@ -53,39 +67,38 @@ btnCadastrar.addEventListener('click', ()=>{
         cadastroLocal.push(novoCadastro);
         dados = JSON.stringify(cadastroLocal);
         local = localStorage.setItem('cadastros', dados);
+        AtualizarLista();
     }
 });
 
 //Limpar
-function Limpar(){
-    const btnLimpar = document.getElementById('limpar');
+const btnLimpar = document.getElementById('limpar');
 
-    btnLimpar.addEventListener('click', ()=>{
-        localStorage.clear();
-    });
-}
+btnLimpar.addEventListener('click', ()=>{
+    localStorage.clear();
+    AtualizarLista();
+});
+
 
 //Excluir
-function Excluir(){
-    const btnExcluir = document.getElementById('excluir');
-    let nome = entradaNome.value;
-    let email = entradaEmail.value;
+const btnExcluir = document.getElementById('excluir');
 
-    btnExcluir.addEventListener('click', ()=>{
-        local = localStorage.getItem('cadastros');
-        console.log(local);
-        local = JSON.parse(local);
-        //const localExcluido = local.filter(item => item.nome === nome);
-        local.forEach(element => {
-            if(element.nome === nome){
-                localStorage.removeItem('cadastros');    
-            }
-        });
-        local = JSON.stringify(local);
-        console.log(local);
-        localStorage.setItem('cadastros', local);
+btnExcluir.addEventListener('click', ()=>{
+    let nome = entradaNome.value;
+    let email = entradaEmail.value; 
+    local = localStorage.getItem('cadastros');
+    console.log(local);
+    local = JSON.parse(local);
+    //const localExcluido = local.filter(item => item.nome === nome);
+    local.forEach(element => {
+        if(element.nome === nome){
+            localStorage.removeItem('cadastros');    
+        }
     });
-}
+    local = JSON.stringify(local);
+    console.log(local);
+    localStorage.setItem('cadastros', local);
+});
 
 //puxar do localStorage, fazer virar uma lista
 //verificar se o que foi colocado com entrada está na lista (iterar com .forEach())
@@ -93,15 +106,19 @@ function Excluir(){
 //excluir com localStorage.removaItem("cadastros", excluido);
 
 //Pesquisar
-function Pesquisar(){
+btnPesquisar = document.getElementById('pesquisar');
+
+btnPesquisar.addEventListener('click',()=>{
     let local = localStorage.getItem('cadastros');
     local = JSON.parse(local);
     let nome = entradaNome.value;
-    let email = entradaEmail.value;
-
-    local.forEach(element => {
-        if(element.nome === nome){
-            alert(`elemento encontrado: data: ${element.data}, nome: ${element.nome}, email: ${element.email}`);
-        }
-    });
-}
+    //let email = entradaEmail.value;
+    if(local!=null & local!='[]'){
+        local.forEach(element => {
+            if(element.nome !== nome){
+                element.hidden = true;
+                //alert(`elemento encontrado: data: ${element.data}, nome: ${element.nome}, email: ${element.email}`);
+            }
+        });
+    }
+});
