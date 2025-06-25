@@ -8,7 +8,7 @@
     <title>Admin</title>
 </head>
 <body class ="admin">
-    <form>
+    <form id="formulario">
          <h2>Admin</h2>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" pattern="[A-Za-zÀ-ÿ]+" name="nome" required>
@@ -19,6 +19,9 @@
             <p><a id="clear">Limpe os campos</a></p>
             
             <button type="button" id="cadastrar" onclick="Cadastrar()">Cadastrar</button>
+            <button type="button" id="excluir" onclick="Excluir()">Excluir</button>
+            <button type="button" id="limpar" onclick="Limpar()">Limpar</button>
+            <button type="button" id="pesquisar" onclick="Pesquisar()">Pesquisar</button>
     </form>
     <script src="script.js"></script>
 </body>
