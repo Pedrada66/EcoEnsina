@@ -113,24 +113,17 @@ btnPesquisar = document.getElementById('pesquisar');
 
 btnPesquisar.addEventListener('click',()=>{
     const itens = document.getElementsByTagName('li');
+    const nome = entradaNome.value;
+    for(i=0; i<itens.length; i++) itens[i].hidden=false;
     for(i=0; i<itens.length; i++){
         const valores = {
         data: itens[i].dataset.data,
         nome: itens[i].dataset.nome,
         email: itens[i].dataset.email
         };
+        if(valores.nome!=nome){
+            itens[i].hidden = true;
+        }
         console.log(typeof(valores), valores);
     }    
-    // let local = localStorage.getItem('cadastros');
-    // local = JSON.parse(local);
-    // let nome = entradaNome.value;
-    // //let email = entradaEmail.value;
-    // if(local!=null & local!='[]'){
-    //     local.forEach(element => {
-    //     if(element.nome !== nome){
-    //         element.hidden =
-    //         //alert(`elemento encontrado: data: ${element.data}, nome: ${element.nome}, email: ${element.email}`);
-    //     }
-    // });
-    // }
 });
