@@ -8,6 +8,9 @@ if(localStorage.getItem('cadastros')!=null & localStorage.getItem('cadastros')!=
     local = JSON.parse(local);
     local.forEach(element => {
         let itens = document.createElement('li');
+        itens.dataset.data = element.data;
+        itens.dataset.nome = element.nome;
+        itens.dataset.email = element.email;
         itens.innerHTML = `data: ${element.data}, nome: ${element.nome}, email: ${element.email}`;
         lista.appendChild(itens);
     });
@@ -109,16 +112,25 @@ btnExcluir.addEventListener('click', ()=>{
 btnPesquisar = document.getElementById('pesquisar');
 
 btnPesquisar.addEventListener('click',()=>{
-    let local = localStorage.getItem('cadastros');
-    local = JSON.parse(local);
-    let nome = entradaNome.value;
-    //let email = entradaEmail.value;
-    if(local!=null & local!='[]'){
-        local.forEach(element => {
-            if(element.nome !== nome){
-                element.hidden = true;
-                //alert(`elemento encontrado: data: ${element.data}, nome: ${element.nome}, email: ${element.email}`);
-            }
-        });
-    }
+    const itens = document.getElementsByTagName('li');
+    for(i=0; i<itens.length; i++){
+        const valores = {
+        data: itens[i].dataset.data,
+        nome: itens[i].dataset.nome,
+        email: itens[i].dataset.email
+        };
+        console.log(typeof(valores), valores);
+    }    
+    // let local = localStorage.getItem('cadastros');
+    // local = JSON.parse(local);
+    // let nome = entradaNome.value;
+    // //let email = entradaEmail.value;
+    // if(local!=null & local!='[]'){
+    //     local.forEach(element => {
+    //     if(element.nome !== nome){
+    //         element.hidden =
+    //         //alert(`elemento encontrado: data: ${element.data}, nome: ${element.nome}, email: ${element.email}`);
+    //     }
+    // });
+    // }
 });
