@@ -29,7 +29,7 @@ form {
     max-width: 400px;
 }
 
-form h2 {
+form h2, .texto {
     margin-bottom: 16px;
     color: #4CAF50;
 }

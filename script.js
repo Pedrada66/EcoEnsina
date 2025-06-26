@@ -1,13 +1,14 @@
 //Verificar se existem itens no localStorage
 if(localStorage.getItem('cadastros')!=null && localStorage.getItem('cadastros')!='[]'){
-    const lista = document.createElement('ul');
-    lista.id = 'lista';
+    const lista = document.getElementById('lista');
+    lista.hidden = false;
     const formulario = document.getElementById('formulario');
     formulario.appendChild(lista);
     let local = localStorage.getItem('cadastros');
     local = JSON.parse(local);
     local.forEach(element => {
         let itens = document.createElement('li');
+        itens.classList.add('texto');
         itens.dataset.data = element.data;
         itens.dataset.nome = element.nome;
         itens.dataset.email = element.email;
@@ -15,26 +16,32 @@ if(localStorage.getItem('cadastros')!=null && localStorage.getItem('cadastros')!
         lista.appendChild(itens);
     });
 }
+else{
+    const lista = document.getElementById('lista');
+    lista.hidden = true;
+}
 
 function AtualizarLista(){
+    let lista = document.getElementById('lista');
+    lista.hidden = true;
+
     let local = localStorage.getItem('cadastros');
     local = JSON.parse(local);
 
-    if(local != null && local != "[]"){
-        const lista = document.getElementById('lista');
+
+    if(local != null && local != "[]" && local != []){
+        lista.hidden = false;
         lista.innerHTML = "";
-        console.log(local);
+        console.log("cheguei aqui");
         local.forEach(element => {
             let itens = document.createElement('li');
+            itens.classList.add('texto');
             itens.dataset.data = element.data;
             itens.dataset.nome = element.nome;
             itens.dataset.email = element.email;
             itens.innerHTML = `data: ${element.data}, nome: ${element.nome}, email: ${element.email}`;
             lista.appendChild(itens);
         });
-    }
-    else{
-        console.log("lista não existe");
     }
 }
 //verificar se existe intens em localStorage.getItem('cadastros')
@@ -71,12 +78,12 @@ btnCadastrar.addEventListener('click', ()=>{
     if(nome!="" && email!=""){
         let cadastroLocal = localStorage.getItem('cadastros');
         cadastroLocal = JSON.parse(cadastroLocal) || [];
-        if(cadastroLocal==null || cadastroLocal=='[]'){
-            const lista = document.createElement('ul');
-            lista.id = 'lista';
-            const formulario = document.getElementById('formulario');
-            formulario.appendChild(lista);
-        }
+        // if(cadastroLocal==null || cadastroLocal=='[]'){
+        //     const lista = document.createElement('ul');
+        //     lista.id = 'lista';
+        //     const formulario = document.getElementById('formulario');
+        //     formulario.appendChild(lista);
+        // }
         let novoCadastro = {data:datas,nome:nome,email:email};
         cadastroLocal.push(novoCadastro);
         dados = JSON.stringify(cadastroLocal);
@@ -100,16 +107,19 @@ const btnExcluir = document.getElementById('excluir');
 btnExcluir.addEventListener('click', ()=>{
     let nome = entradaNome.value;
     let email = entradaEmail.value; 
+    let local = localStorage.getItem('cadastros');
 
-    local = localStorage.getItem('cadastros');
-    console.log(local);
-    local = JSON.parse(local);
-    local = local.filter(item => !(item.nome === nome && item.email === email));
-    local = JSON.stringify(local);
-    console.log(local);
-    localStorage.setItem('cadastros', local);
-    
-    AtualizarLista();
+    if(local != null && local != "[]" && local != []){
+        console.log(local);
+        local = JSON.parse(local);
+        local = local.filter(item => !(item.nome === nome && item.email === email));
+        local = JSON.stringify(local);
+        console.log(typeof(local));
+        localStorage.setItem('cadastros', local);
+
+        if(local.length == 0) localStorage.clear();
+        AtualizarLista();
+    }
 });
 
 //Pesquisar
