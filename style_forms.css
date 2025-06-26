@@ -61,7 +61,7 @@ form button {
     font-size: large;
 }
 
-form button:hover {
+form button:hover, #excluir:hover, #limpar:hover, #pesquisar:hover {
     background-color: #45a049;
 }
 
