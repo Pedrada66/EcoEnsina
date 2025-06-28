@@ -78,12 +78,14 @@ btnCadastrar.addEventListener('click', ()=>{
     if(nome!="" && email!=""){
         let cadastroLocal = localStorage.getItem('cadastros');
         cadastroLocal = JSON.parse(cadastroLocal) || [];
-        // if(cadastroLocal==null || cadastroLocal=='[]'){
-        //     const lista = document.createElement('ul');
-        //     lista.id = 'lista';
-        //     const formulario = document.getElementById('formulario');
-        //     formulario.appendChild(lista);
-        // }
+   
+        const emailJaExiste = cadastroLocal.some(cadastro => cadastro.email === email);
+
+        if (emailJaExiste) {
+            alert("Este e-mail já está cadastrado.");
+            return; 
+        }
+
         let novoCadastro = {data:datas,nome:nome,email:email};
         cadastroLocal.push(novoCadastro);
         dados = JSON.stringify(cadastroLocal);
