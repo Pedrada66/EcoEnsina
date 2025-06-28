@@ -78,6 +78,14 @@ btnCadastrar.addEventListener('click', ()=>{
     if(nome!="" && email!=""){
         let cadastroLocal = localStorage.getItem('cadastros');
         cadastroLocal = JSON.parse(cadastroLocal) || [];
+
+        const emailJaExiste = cadastroLocal.some(cadastro => cadastro.email === email);
+
+        if (emailJaExiste) {
+            alert("Este e-mail já está cadastrado.");
+            return; // impede o cadastro duplicado
+        }
+        
         let novoCadastro = {data:datas,nome:nome,email:email};
         cadastroLocal.push(novoCadastro);
         dados = JSON.stringify(cadastroLocal);
