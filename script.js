@@ -1,18 +1,23 @@
 //Verificar se existem itens no localStorage
 if(localStorage.getItem('cadastros')!=null && localStorage.getItem('cadastros')!='[]'){
     const lista = document.getElementById('lista');
-    lista.hidden = false;
     const formulario = document.getElementById('formulario');
     formulario.appendChild(lista);
+
     let local = localStorage.getItem('cadastros');
     local = JSON.parse(local);
+
     local.forEach(element => {
         let itens = document.createElement('li');
+
         itens.classList.add('texto');
+
         itens.dataset.data = element.data;
         itens.dataset.nome = element.nome;
         itens.dataset.email = element.email;
+
         itens.innerHTML = `data: ${element.data}, nome: ${element.nome}, email: ${element.email}`;
+
         lista.appendChild(itens);
     });
 }
@@ -20,7 +25,7 @@ else{
     const lista = document.getElementById('lista');
     lista.hidden = true;
 }
-
+//Atualiza itens da lista (<li>) 
 function AtualizarLista(){
     let lista = document.getElementById('lista');
     lista.hidden = true;
@@ -35,11 +40,15 @@ function AtualizarLista(){
 
         local.forEach(element => {
             let itens = document.createElement('li');
+
             itens.classList.add('texto');
+
             itens.dataset.data = element.data;
             itens.dataset.nome = element.nome;
             itens.dataset.email = element.email;
+
             itens.innerHTML = `data: ${element.data}, nome: ${element.nome}, email: ${element.email}`;
+            
             lista.appendChild(itens);
         });
     }
@@ -78,7 +87,7 @@ btnCadastrar.addEventListener('click', ()=>{
             alert("Digite um e-mail válido.");
             return;
         }
-        
+
         let cadastroLocal = localStorage.getItem('cadastros');
         cadastroLocal = JSON.parse(cadastroLocal) || [];
 
@@ -94,6 +103,15 @@ btnCadastrar.addEventListener('click', ()=>{
         dados = JSON.stringify(cadastroLocal);
         local = localStorage.setItem('cadastros', dados);
         AtualizarLista();
+    }
+    else if(nome!="" && email==""){
+        alert("Campo de email não foi preenchido");
+    }
+    else if(nome=="" && email!=""){
+        alert("Campo de nome não foi preenchido");
+    }
+    else{
+        alert("Ambos os campos não foram preenchidos");
     }
 });
 
