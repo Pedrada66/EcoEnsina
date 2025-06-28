@@ -65,13 +65,20 @@ btnCadastrar.addEventListener('click', ()=>{
     const nome = entradaNome.value;
     const email = entradaEmail.value;
 
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     const data = new Date();
     const dia = data.getDate();
     const mes = data.getMonth() + 1;
     const ano = data.getFullYear();
     let datas = `${dia}/${mes}/${ano}`;
 
-    if(nome!="" && email!=""){
+    if(nome!="" && email!=""){   
+        if (!emailValido.test(email)) {
+            alert("Digite um e-mail válido.");
+            return;
+        }
+        
         let cadastroLocal = localStorage.getItem('cadastros');
         cadastroLocal = JSON.parse(cadastroLocal) || [];
 
