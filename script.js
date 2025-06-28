@@ -44,9 +44,6 @@ function AtualizarLista(){
         });
     }
 }
-//verificar se existe intens em localStorage.getItem('cadastros')
-//caso haja, criar ul e com calores de li
-//senão nem cria pfvr
 
 // Limpar campos de entrada
 const entradaNome = document.getElementById("nome");
@@ -70,11 +67,10 @@ btnCadastrar.addEventListener('click', ()=>{
 
     const data = new Date();
     const dia = data.getDate();
-    const mes = data.getMonth() + 1; //não sei pq mas tava dando maio como o mês
+    const mes = data.getMonth() + 1;
     const ano = data.getFullYear();
     let datas = `${dia}/${mes}/${ano}`;
 
-    //Verifica se usuário entrou com algo nos campos de entrada
     if(nome!="" && email!=""){
         let cadastroLocal = localStorage.getItem('cadastros');
         cadastroLocal = JSON.parse(cadastroLocal) || [];
@@ -83,7 +79,7 @@ btnCadastrar.addEventListener('click', ()=>{
 
         if (emailJaExiste) {
             alert("Este e-mail já está cadastrado.");
-            return; // impede o cadastro duplicado
+            return; 
         }
         
         let novoCadastro = {data:datas,nome:nome,email:email};
