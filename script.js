@@ -32,7 +32,7 @@ function AtualizarLista(){
     if(local != null && local != "[]" && local != []){
         lista.hidden = false;
         lista.innerHTML = "";
-        console.log("cheguei aqui");
+
         local.forEach(element => {
             let itens = document.createElement('li');
             itens.classList.add('texto');
@@ -78,12 +78,6 @@ btnCadastrar.addEventListener('click', ()=>{
     if(nome!="" && email!=""){
         let cadastroLocal = localStorage.getItem('cadastros');
         cadastroLocal = JSON.parse(cadastroLocal) || [];
-        // if(cadastroLocal==null || cadastroLocal=='[]'){
-        //     const lista = document.createElement('ul');
-        //     lista.id = 'lista';
-        //     const formulario = document.getElementById('formulario');
-        //     formulario.appendChild(lista);
-        // }
         let novoCadastro = {data:datas,nome:nome,email:email};
         cadastroLocal.push(novoCadastro);
         dados = JSON.stringify(cadastroLocal);
@@ -127,17 +121,19 @@ btnPesquisar = document.getElementById('pesquisar');
 
 btnPesquisar.addEventListener('click',()=>{
     const itens = document.getElementsByTagName('li');
+    
     const nome = entradaNome.value;
-    for(i=0; i<itens.length; i++) itens[i].hidden=false;
+
     for(i=0; i<itens.length; i++){
+        itens[i].hidden=false;
+
         const valores = {
             data: itens[i].dataset.data,
             nome: itens[i].dataset.nome,
             email: itens[i].dataset.email
         };
-        if(valores.nome!=nome){
-            itens[i].hidden = true;
-        }
-        console.log(typeof(valores), valores);
-    }    
+    
+        if(valores.nome!=nome && nome!="") itens[i].hidden = true;
+
+    };
 });
