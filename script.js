@@ -152,6 +152,7 @@ btnPesquisar.addEventListener('click',()=>{
     const itens = document.getElementsByTagName('li');
     
     const nome = entradaNome.value;
+    const email = entradaEmail.value;
 
     for(i=0; i<itens.length; i++){
         itens[i].hidden=false;
@@ -163,6 +164,7 @@ btnPesquisar.addEventListener('click',()=>{
         };
     
         if(valores.nome!=nome && nome!="") itens[i].hidden = true;
+        if(valores.email!=email && email!="") itens[i].hidden = true;
 
     };
 });
